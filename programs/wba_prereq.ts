@@ -11,3 +11,5 @@ const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
 const connection = new Connection("https://api.devnet.solana.com");
 
 const github = Buffer.from("<your github account>", "utf8");
+
+const provider = new AnchorProvider(connection, new Wallet(keypair), { commitment: "confirmed" });
