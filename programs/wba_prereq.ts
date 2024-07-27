@@ -13,3 +13,5 @@ const connection = new Connection("https://api.devnet.solana.com");
 const github = Buffer.from("<your github account>", "utf8");
 
 const provider = new AnchorProvider(connection, new Wallet(keypair), { commitment: "confirmed" });
+
+const program: Program<WbaPrereq> = new Program(IDL, provider);
