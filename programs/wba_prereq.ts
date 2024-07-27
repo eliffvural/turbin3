@@ -23,3 +23,10 @@ const [enrollment_key, _bump] = PublicKey.findProgramAddressSync(enrollment_seed
     try {
       const txhash = await program.methods
         .complete(github)
+
+        .accounts({
+            signer: keypair.publicKey,
+          })
+          .signers([
+            keypair
+          ]).rpc();
