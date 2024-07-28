@@ -16,7 +16,7 @@ const provider = new AnchorProvider(connection, new Wallet(keypair), {
 
 // Create our program
 const program = new Program<WbaPrereq>(IDL,
-    "111111111111111111111111" as Address, provider);
+    "222222222222222222222" as Address, provider);
 
 // Create the PDA for our enrollment account
 const enrollment_seeds = [Buffer.from("prereq"),
